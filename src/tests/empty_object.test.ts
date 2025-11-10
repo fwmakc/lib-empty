@@ -1,12 +1,12 @@
-import { emptyObject } from "../helpers/empty_object.helper";
-import { testCases } from "./testcases";
+import { emptyObject } from '../helpers/empty_object.helper';
+import { testCases } from './testcases';
 
 describe('emptyObject', () => {
   testCases.forEach(({ val, ref }) => {
     it(`${val} -> ${ref}`, () => {
       const result = emptyObject(val);
       if (ref) {
-        expect(result).toBeTruthly();
+        expect(result).toBeTruthy();
       } else {
         expect(result).toBeFalsy();
       }

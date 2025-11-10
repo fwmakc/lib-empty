@@ -5,11 +5,11 @@ import { notEmptyArray } from './helpers/not_empty_array.helper';
 import { notEmptyObject } from './helpers/not_empty_object.helper';
 import { notEmptyValue } from './helpers/not_empty_value.helper';
 
-export { 
-    emptyArray,
-    emptyObject,
-    emptyValue,
-    notEmptyArray,
-    notEmptyObject,
-    notEmptyValue,
+export {
+  emptyArray,
+  emptyObject,
+  emptyValue,
+  notEmptyArray,
+  notEmptyObject,
+  notEmptyValue,
 };
