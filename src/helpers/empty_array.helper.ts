@@ -1,3 +1,3 @@
-export function emptyArray(a: Array<any>): boolean {
+export function emptyArray(a: any): boolean {
   return Boolean(a) && Array.isArray(a) && !a?.length;
 }

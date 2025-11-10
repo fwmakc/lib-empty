@@ -1,5 +1,17 @@
 import { emptyObject } from '../helpers/empty_object.helper';
-import { testCases } from './testcases';
+
+const testCases = [
+  { val: '', ref: false },
+  { val: null, ref: false },
+  { val: undefined, ref: false },
+  { val: [], ref: true },
+  { val: {}, ref: true },
+  { val: 0, ref: false },
+  { val: '0', ref: false },
+  { val: 'a', ref: false },
+  { val: [0], ref: false },
+  { val: { a: 0 }, ref: false },
+];
 
 describe('emptyObject', () => {
   testCases.forEach(({ val, ref }) => {

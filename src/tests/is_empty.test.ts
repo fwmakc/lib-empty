@@ -1,10 +1,14 @@
-import { emptyArray } from '../helpers/empty_array.helper';
+import { isEmpty } from '../helpers/is_empty.helper';
 
 const testCases = [
-  { val: '', ref: false },
-  { val: null, ref: false },
-  { val: undefined, ref: false },
-  { val: [], ref: true },
+  { val: '', ref: true },
+  { val: null, ref: true },
+  { val: undefined, ref: true },
+  { val: true, ref: false },
+  { val: false, ref: true },
+  { val: NaN, ref: true },
+  { val: Infinity, ref: false },
+  { val: [], ref: false },
   { val: {}, ref: false },
   { val: 0, ref: false },
   { val: '0', ref: false },
@@ -13,10 +17,10 @@ const testCases = [
   { val: { a: 0 }, ref: false },
 ];
 
-describe('emptyArray', () => {
+describe('isEmpty', () => {
   testCases.forEach(({ val, ref }) => {
     it(`${val} -> ${ref}`, () => {
-      const result = emptyArray(val);
+      const result = isEmpty(val);
       if (ref) {
         expect(result).toBeTruthy();
       } else {
