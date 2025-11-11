@@ -1,6 +1,6 @@
 {
   "name": "lib-empty",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple node.js library to check for empty values",
   "keywords": [
     "array",
