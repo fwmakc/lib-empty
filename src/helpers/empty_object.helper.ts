@@ -11,6 +11,8 @@
  * emptyObject({ key: 'value' }); // returns false
  * emptyObject(null); // returns false
  */
-export function emptyObject(o: any): boolean {
-  return Boolean(o) && typeof o === 'object' && !Object.keys(o)?.length;
+export function emptyObject(o: unknown): boolean {
+  return (
+    Boolean(o) && typeof o === 'object' && !Object.keys(o as object)?.length
+  );
 }

@@ -11,6 +11,6 @@
  * emptyArray([1, 2, 3]); // returns false
  * emptyArray(null); // returns false
  */
-export function emptyArray(a: any): boolean {
+export function emptyArray(a: unknown): boolean {
   return Boolean(a) && Array.isArray(a) && !a?.length;
 }

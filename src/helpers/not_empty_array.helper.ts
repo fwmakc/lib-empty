@@ -11,6 +11,6 @@
  * notEmptyArray([1]); // returns true
  * notEmptyArray(null); // returns false
  */
-export function notEmptyArray(a: any): boolean {
+export function notEmptyArray(a: unknown): boolean {
   return Boolean(a) && Array.isArray(a) && a?.length > 0;
 }

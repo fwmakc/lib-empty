@@ -12,6 +12,6 @@
  * isEmpty(0); // returns false
  * isEmpty('test'); // returns false
  */
-export function isEmpty(v: any): boolean {
+export function isEmpty(v: unknown): boolean {
   return !v && v !== 0;
 }

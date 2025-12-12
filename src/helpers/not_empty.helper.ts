@@ -12,6 +12,6 @@
  * notEmpty(''); // returns false
  * notEmpty('test'); // returns true
  */
-export function notEmpty(v: any): boolean {
-  return v || v === 0;
+export function notEmpty(v: unknown): boolean {
+  return Boolean(v || v === 0);
 }

@@ -11,6 +11,8 @@
  * notEmptyObject({ key: 'value' }); // returns true
  * notEmptyObject(null); // returns false
  */
-export function notEmptyObject(o: any): boolean {
-  return Boolean(o) && typeof o === 'object' && Object.keys(o)?.length > 0;
+export function notEmptyObject(o: unknown): boolean {
+  return (
+    Boolean(o) && typeof o === 'object' && Object.keys(o as object)?.length > 0
+  );
 }
